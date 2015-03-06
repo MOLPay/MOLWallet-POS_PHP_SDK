@@ -1,9 +1,9 @@
 <?php
 include_once "MOLPay.POS.class.php";
 $params['amount'] 		= $_POST['amount'];
-$params['orderid']		= $_POST['amount'];
-$params['country'] 		= $_POST['amount'];
-$params['cur'] 			= $_POST['amount'];
+$params['orderid']		= $_POST['orderid'];
+$params['country'] 		= $_POST['country'];
+$params['cur'] 			= $_POST['cur'];
 
 $params['merchant_id'] 	= '_MERCHANT_MERCHANT_ID';
 $params['verify_key']	= '_MERCHANT_VERIFY_KEY_';
