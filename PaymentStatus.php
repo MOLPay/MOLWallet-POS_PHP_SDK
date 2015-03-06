@@ -1,8 +1,8 @@
 <?php
 include_once "MOLPay.POS.class.php";
 
-$params['merchant_id'] 			// '_YOUR_MERCHANT_ID';
-$params['merchant_order_id']	// '_YOUR_ORDER_ID'; 
+$params['merchant_id'] 			= '_YOUR_MERCHANT_ID_';
+$params['merchant_order_id']	= '_YOUR_ORDER_ID_'; 
 
 $payment 	= new POS_MOLPay();
 $result		= $payment->CheckInvoice($params);
