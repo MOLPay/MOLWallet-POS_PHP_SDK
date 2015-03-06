@@ -1,20 +1,18 @@
 <?php
 include_once "MOLPay.POS.class.php";
-$params['amount'] 		// 10;
-$params['orderid']		// "DEMO4001";
-$params['country'] 		= 'MY';
-$params['cur'] 			= 'MYR';
-$params['merchant_id'] 	// '_YOUR_MERCHANT_ID';
+$params['amount'] 		= $_POST['amount'];
+$params['orderid']		= $_POST['amount'];
+$params['country'] 		= $_POST['amount'];
+$params['cur'] 			= $_POST['amount'];
 
-$params['verify_key']	// '_YOUR_VERIFY_KEY'; 
+$params['merchant_id'] 	= '_MERCHANT_MERCHANT_ID';
+$params['verify_key']	= '_MERCHANT_VERIFY_KEY_';
 
-$params['channel'] 		= 'MOLWallet';
-
-$params['bill_name'] 	// 'Hardi';
-$params['bill_email'] 	// 'hardiansyah@molpay.com';
-$params['bill_mobile']	// $_GET['bill_mobile'];
-$params['bill_desc']	// 'transaction for '.$params['orderid']. ' '. date('d-m-Y G:i:s');
-$params['terminal_id']	// '_YOUR_TERMINAL_ID';
+$params['bill_name'] 	= $_POST['bill_name'];
+$params['bill_email'] 	= $_POST['bill_email'];
+$params['bill_mobile']	= $_POST['bill_mobile'];
+$params['bill_desc']	= $_POST['bill_desc'];
+$params['terminal_id']	= '_MERCHANT_TERMINAL_ID_';
 
 $payment 	= new POS_MOLPay($params);
 $result		= $payment->MobilePay();
