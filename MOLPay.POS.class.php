@@ -8,7 +8,6 @@
 ***/
 Class POS_MOLPay {
 	
-	var $url 	= 'https://www.onlinepayment.com.my/MOLPay/API/mobile_new/index.php';
 	var $params = array();
 	var $verify_key;	
 	
@@ -45,7 +44,6 @@ Class POS_MOLPay {
 		$results = json_decode($result, 1);
 		
 		if($results['msgType'] == 'E10'){
-			$urlMobile = 'https://web.molwallet.com/MOLWallet-GTWs/APIs/index.php';
 			
 			$mobile['merchant_id']		= $this->params['merchant_id'];
 			$mobile['merchant_order_id']= $this->params['merchant_order_id'];
@@ -98,7 +96,6 @@ Class POS_MOLPay {
 		$results = json_decode($result, 1);
 		
 		if($results['msgType'] == 'E10'){
-			$urlMobile = 'https://web.molwallet.com/MOLWallet-GTWs/APIs/index.php';
 			
 			$mobile['merchant_id']		= $this->params['merchant_id'];
 			$mobile['merchant_order_id']= $this->params['merchant_order_id'];
